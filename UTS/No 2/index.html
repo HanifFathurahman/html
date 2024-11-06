@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Mata Pelajaran Siswa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .nama-siswa {
+            background-color: #ffcccc;
+        }
+        .mata-pelajaran {
+            background-color: #ccffcc;
+        }
+        .jadwal-hari {
+            background-color: #ccccff;
+        }
+        .jadwal-jam {
+            background-color: #ffffcc;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Jadwal Mata Pelajaran Siswa</div>
+    <table>
+        <tr>
+            <th class="nama-siswa" rowspan="2">Nama Siswa</th>
+            <th class="mata-pelajaran" rowspan="2">Mata Pelajaran</th>
+            <th class="jadwal-hari" colspan="2">Jadwal</th>
+        </tr>
+        <tr>
+            <th class="jadwal-hari">Hari</th>
+            <th class="jadwal-jam">Jam</th>
+        </tr>
+        <tr>
+            <td class="nama-siswa" rowspan="2">Ahmad</td>
+            <td class="mata-pelajaran">Matematika</td>
+            <td class="jadwal-hari">Senin</td>
+            <td class="jadwal-jam">08:00 - 09:30</td>
+        </tr>
+        <tr>
+            <td class="mata-pelajaran">Bahasa Inggris</td>
+            <td class="jadwal-hari">Selasa</td>
+            <td class="jadwal-jam">10:00 - 11:30</td>
+        </tr>
+        <tr>
+            <td class="nama-siswa">Budi</td>
+            <td class="mata-pelajaran">Fisika</td>
+            <td class="jadwal-hari">Rabu</td>
+            <td class="jadwal-jam">09:00 - 10:30</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Sholat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="icons8-mosque-48.png" type="image/x-icon">
+</head>
+<body>
+    <h1 class="title">Jadwal Sholat Real Time</h1>
+    <div id="current-time" class="current-time"></div> <!-- New element for displaying the current time -->
+    <div class="schedule-container">
+        <div id="location"></div>
+        <table id="prayer-times">
+            <thead>
+                <tr>
+                    <th>Sholat</th>
+                    <th>Waktu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Subuh</td>
+                    <td id="fajr"></td>
+                </tr>
+                <tr>
+                    <td>Dzuhur</td>
+                    <td id="dhuhr"></td>
+                </tr>
+                <tr>
+                    <td>Ashar</td>
+                    <td id="asr"></td>
+                </tr>
+                <tr>
+                    <td>Maghrib</td>
+                    <td id="maghrib"></td>
+                </tr>
+                <tr>
+                    <td>Isya</td>
+                    <td id="isha"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer class="footer">
+        by: <a href="https://www.instagram.com/hanif_fathurahman" target="_blank">@hanif_fathurahman</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

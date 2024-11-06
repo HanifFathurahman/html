@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .marquee-container {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            width: 100%;
+            position: fixed;
+            top: 0;
+        }
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            margin-top: 80px; /* Agar tidak terhalang marquee */
+        }
+        .form-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .form-header img {
+            width: 120px;
+            height: auto;
+        }
+        .form-header h2 {
+            font-weight: bold;
+            font-size: 30px;
+            margin: 0;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            width: 150px;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="date"],
+        .form-group select,
+        .form-group textarea {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .radio-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 20px;
+            width: 100%;
+            margin-top: 15px;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Marquee -->
+    <div class="marquee-container">
+        <div class="marquee">SELAMAT DATANG DI FORMULIR PENDAFTARAN! Harap isi data dengan lengkap dan benar.</div>
+    </div>
+
+    <!-- Form Container -->
+    <div class="form-container">
+        <div class="form-header">
+            <!-- Logo di kiri dan kanan -->
+            <img src="img/unindra-logo.png" alt="Logo Unindra">
+            <h2>Formulir Pendaftaran</h2>
+            <img src="img/unindra-logo.png" alt="Logo Unindra">
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="nomor-telepon">Nomor Telepon:</label>
+                <input type="tel" id="nomor-telepon" name="nomor-telepon" required>
+            </div>
+            <div class="form-group">
+                <label for="tanggal-lahir">Tanggal Lahir:</label>
+                <input type="date" id="tanggal-lahir" name="tanggal-lahir" required>
+            </div>
+            <div class="form-group">
+                <label>Jenis Kelamin:</label>
+                <div class="radio-group">
+                    <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki" required>
+                    <label for="laki-laki">Laki-laki</label>
+                    <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan">
+                    <label for="perempuan">Perempuan</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="program-studi">Program Studi:</label>
+                <select id="program-studi" name="program-studi" required>
+                    <option value="">Pilih Program Studi</option>
+                    <option value="teknik-informatika">Teknik Informatika</option>
+                    <option value="sistem-informasi">Sistem Informasi</option>
+                    <option value="fisika">Fisika</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" name="alamat" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Kirim</button>
+        </form>
+    </div>
+</body>
+</html>
